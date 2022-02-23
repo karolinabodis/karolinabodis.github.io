@@ -1,0 +1,85 @@
+/************************/
+/***  ||  Mobile  ||  ***/
+/************************/
+@include media-sm {
+	/***  ||  Footer  ||  ***/
+	.footer__content {
+		height: 7rem;
+	}
+}
+
+/************************/
+/***  ||  Tablet  ||  ***/
+/************************/
+@include media-md {
+	:root {
+		font-size: 80%;
+	}
+
+	/***  ||  Utilities  ||  ***/
+	.small {
+		font-size: 1.2rem;
+	}
+
+	.py-2 {
+		padding: 1.5rem 0;
+	}
+
+	/***  ||  Home  ||  ***/
+	.home__content {
+		.l-heading {
+			h2 {
+				padding-bottom: 6rem;
+			}
+		}
+		.arrow::after {
+			left: -0.3rem;
+		}
+	}
+
+	/***  ||  Navigation  ||  ***/
+	.nav__content {
+		.logo {
+			img {
+				width: 5rem;
+			}
+		}
+	}
+
+	/***  ||  Footer  ||  ***/
+	.footer__content {
+		@include space-between;
+
+		p {
+			margin-bottom: 0;
+		}
+	}
+}
+
+/************************/
+/***  ||  Laptop  ||  ***/
+/************************/
+@include media-lg {
+	/***  ||  About ||  ***/
+	.about {
+		padding-top: 10rem;
+	}
+
+	/***  ||  Projects  ||  ***/
+	.projects .project {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		-webkit-column-gap: 2rem;
+		column-gap: 2rem;
+		padding-bottom: 10rem;
+	}
+
+	/***  ||  Contact  ||  ***/
+	.contact {
+		margin-bottom: 10rem;
+
+		.form {
+			width: 40%;
+		}
+	}
+}

@@ -1,0 +1,28 @@
+/**************************/
+/***  ||  My Skills ||  ***/
+/**************************/
+.skills {
+	margin-top: -5rem;
+
+	&__content {
+		@include text-center;
+		padding: 8rem 0 4rem 0;
+
+		.icons {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 3rem;
+			margin: 0 auto;
+			max-width: 500px;
+
+			.material-icons {
+				font-size: 3.5rem;
+			}
+
+			p {
+				font-size: 1.4rem;
+				margin-bottom: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,28 @@
+/************************/
+/***  ||  Footer  ||  ***/
+/************************/
+.footer__content {
+	@include text-center;
+	height: 5rem;
+
+	span {
+		font-family: $font-secondary;
+	}
+
+	.socials {
+		a {
+			color: $dark-blue;
+			border: 2px solid $dark-blue;
+			border-radius: 50%;
+			cursor: pointer;
+			margin-right: 1rem;
+			padding: 1rem;
+			@include transition-ease;
+
+			&:hover {
+				background-color: $light-blue;
+				color: $white;
+			}
+		}
+	}
+}

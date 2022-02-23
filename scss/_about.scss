@@ -1,0 +1,22 @@
+/**********************/
+/***  ||  About ||  ***/
+/**********************/
+.about {
+	padding-top: 8rem;
+	@include transform-skew;
+
+	&__content {
+		@include transform-skew-back;
+
+		h2 {
+			padding-bottom: 2rem;
+		}
+
+		img {
+			border-radius: 50%;
+			display: block;
+			width: 13rem;
+			margin: 0 auto;
+		}
+	}
+}

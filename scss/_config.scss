@@ -1,0 +1,103 @@
+/***************************/
+/***  ||  Typography ||  ***/
+/***************************/
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
+@font-face {
+	font-family: "Caviar Dreams";
+	src: url("../fonts/CaviarDreams-webfont.woff") format("woff");
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: "Caviar Dreams";
+	src: url("../fonts/CaviarDreams_Bold-webfont.woff") format("woff");
+	font-style: normal;
+	font-weight: 700;
+}
+
+/***  ||  Variables  ||  ***/
+$font-primary: "Lato", sans-serif;
+$font-secondary: "Caviar Dreams", sans-serif;
+$red-violet: hsl(334, 48%, 59%);
+$light-violet: hsl(334, 49%, 90%);
+$dark-blue: hsl(191, 34%, 32%);
+$light-blue: hsl(191, 34%, 50%);
+$sky-blue: hsl(207, 67%, 45%);
+$light-grey: #e6e6e6;
+$white: #f4f4f4;
+
+/***  ||  Set text color based on bg  ||  ***/
+@function set-text-color($color) {
+	@if (lightness($color) > 70) {
+		@return $dark-blue;
+	} @else {
+		@return $white;
+	}
+}
+
+/***  ||  Set background & text-color  ||  ***/
+@mixin set-background($color) {
+	background-color: $color;
+	color: set-text-color($color);
+}
+
+/***  ||  Transition  ||  ***/
+@mixin transition-ease {
+	transition: all 0.5s ease-in-out;
+}
+
+/***  ||  Transform  ||  ***/
+@mixin transform-skew {
+	transform: skewY(6deg);
+}
+
+@mixin transform-skew-back {
+	transform: skewY(-6deg);
+}
+
+// transition: all 300ms ease; button
+
+/***  ||  Flex  ||  ***/
+@mixin space-between {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+@mixin center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/***  ||  Text-center ||  ***/
+@mixin text-center {
+	text-align: center;
+}
+
+/***  ||  Set media queries  ||  ***/
+@mixin media-sm {
+	@media screen and (max-width: 48em) {
+		@content;
+	}
+}
+
+@mixin media-md {
+	@media screen and (min-width: 48em) {
+		@content;
+	}
+}
+
+@mixin media-lg {
+	@media screen and (min-width: 64em) {
+		@content;
+	}
+}
+
+@mixin media-xl {
+	@media screen and (min-width: 100em) {
+		@content;
+	}
+}

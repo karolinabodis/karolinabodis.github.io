@@ -1,0 +1,60 @@
+/****************************/
+/***  ||  Navigation  ||  ***/
+/****************************/
+.nav {
+	position: sticky;
+	position: -webkit-sticky;
+	top: 0;
+	z-index: 10;
+
+	&__content {
+		@include space-between;
+
+		.logo {
+			img {
+				width: 4rem;
+				vertical-align: bottom;
+			}
+
+			a {
+				display: inline-block;
+				height: 100%;
+			}
+		}
+
+		&--bar {
+			li {
+				display: inline-block;
+				margin-right: 0.5rem;
+
+				&:last-of-type {
+					margin-right: 0;
+				}
+
+				a {
+					color: $dark-blue;
+					display: block;
+					font-weight: 400;
+					padding: 1rem;
+					position: relative;
+
+					&::before {
+						content: "";
+						position: absolute;
+						background: $red-violet;
+						height: 100%;
+						top: 0;
+						left: 0;
+						opacity: 0.3;
+						width: 2px;
+						@include transition-ease;
+					}
+
+					&:hover::before {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,30 @@
+.btn {
+	background-color: $red-violet;
+	border: none;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	box-shadow: 0 1rem 2rem hsla(191, 34%, 32%, 0.3);
+	color: $white;
+	cursor: pointer;
+	outline: none;
+	padding: 1rem 4rem;
+	width: 40%;
+	-webkit-transform: translateY(-1px);
+	transform: translateY(-1px);
+	-webkit-transition: all 300ms ease;
+	transition: all 300ms ease;
+
+	&:hover {
+		background-color: darken($red-violet, 10%);
+		-webkit-transform: translateY(-3px);
+		transform: translateY(-3px);
+		box-shadow: 0 1rem 2rem hsla(191, 34%, 32%, 0.3);
+	}
+
+	&:active,
+	&:focus {
+		-webkit-transform: translateY(-1px);
+		transform: translateY(-1px);
+		box-shadow: 0rem 0.3rem 0.5rem hsla(191, 34%, 32%, 0.8);
+	}
+}
